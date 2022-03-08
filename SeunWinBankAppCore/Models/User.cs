@@ -8,9 +8,10 @@ namespace SeunWinBankAppCore
 {
     public class User
     {
-        public string AccountName { get; set; }
+        public string Fullname { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
+
         public List<SAccount> ListOfBankAccounts;
     }
 }
