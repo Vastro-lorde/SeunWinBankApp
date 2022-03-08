@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32002.185
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeunWinBankApp", "SeunWinBankApp\SeunWinBankApp.csproj", "{209BBE79-159D-4435-97CE-54F1CA113892}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeunWinBankApp", "SeunWinBankApp\SeunWinBankApp.csproj", "{209BBE79-159D-4435-97CE-54F1CA113892}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeunWinBankAppCore", "SeunWinBankAppCore\SeunWinBankAppCore.csproj", "{E3C02AB8-5990-41D2-8CF8-A297228DFA6D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{209BBE79-159D-4435-97CE-54F1CA113892}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{209BBE79-159D-4435-97CE-54F1CA113892}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{209BBE79-159D-4435-97CE-54F1CA113892}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3C02AB8-5990-41D2-8CF8-A297228DFA6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3C02AB8-5990-41D2-8CF8-A297228DFA6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3C02AB8-5990-41D2-8CF8-A297228DFA6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3C02AB8-5990-41D2-8CF8-A297228DFA6D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
