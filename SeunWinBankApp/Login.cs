@@ -14,6 +14,7 @@ namespace SeunWinBankApp
     public partial class Login : Form
     {
         public Signup signup = new(); 
+        public Dashboard dashboard = new();
         private static IValidation _validation;
         public static IValidation Validation
         {
@@ -46,17 +47,21 @@ namespace SeunWinBankApp
             if (email == "" || password == "")
             {
                 MessageBox.Show("Please fill all fields");
+                return;
             }
             else if (!Validation.VerifyEmail(email)) 
             { 
                 MessageBox.Show("Incorrect format of Email inputed");
+                return;
             } 
             else if (!Validation.CheckPasswordInput(password))
             {
                 MessageBox.Show("Password should contain an uppercase, lowercase, number and special character");
+                return;
 
             }
-
+            dashboard.Show();
+            this.Hide();
             
         }
 

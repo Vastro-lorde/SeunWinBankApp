@@ -45,9 +45,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(575, 190);
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.SlateBlue;
+            this.label4.Location = new System.Drawing.Point(636, 191);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(115, 25);
+            this.label4.Size = new System.Drawing.Size(122, 25);
             this.label4.TabIndex = 9;
             this.label4.Text = "Saving souls.";
             // 
@@ -57,7 +59,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Goudy Old Style", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(248, 108);
+            this.label3.Location = new System.Drawing.Point(309, 109);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(457, 82);
             this.label3.TabIndex = 8;
@@ -69,7 +71,7 @@
             this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRegister.Font = new System.Drawing.Font("Britannic Bold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnRegister.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnRegister.Location = new System.Drawing.Point(560, 451);
+            this.btnRegister.Location = new System.Drawing.Point(621, 452);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(130, 34);
             this.btnRegister.TabIndex = 14;
@@ -82,7 +84,7 @@
             this.txtPassword.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.txtPassword.HideSelection = false;
-            this.txtPassword.Location = new System.Drawing.Point(421, 391);
+            this.txtPassword.Location = new System.Drawing.Point(482, 392);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.PlaceholderText = "password";
@@ -92,7 +94,7 @@
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.txtEmail.Location = new System.Drawing.Point(421, 339);
+            this.txtEmail.Location = new System.Drawing.Point(482, 340);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PlaceholderText = "abc@email.com";
             this.txtEmail.Size = new System.Drawing.Size(269, 31);
@@ -104,7 +106,7 @@
             this.label2.BackColor = System.Drawing.Color.SteelBlue;
             this.label2.Font = new System.Drawing.Font("Britannic Bold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.Lavender;
-            this.label2.Location = new System.Drawing.Point(265, 391);
+            this.label2.Location = new System.Drawing.Point(326, 392);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(132, 31);
             this.label2.TabIndex = 11;
@@ -116,7 +118,7 @@
             this.label1.BackColor = System.Drawing.Color.SteelBlue;
             this.label1.Font = new System.Drawing.Font("Britannic Bold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Lavender;
-            this.label1.Location = new System.Drawing.Point(265, 337);
+            this.label1.Location = new System.Drawing.Point(326, 338);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 31);
             this.label1.TabIndex = 10;
@@ -125,7 +127,7 @@
             // txtFullname
             // 
             this.txtFullname.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.txtFullname.Location = new System.Drawing.Point(422, 277);
+            this.txtFullname.Location = new System.Drawing.Point(483, 278);
             this.txtFullname.Name = "txtFullname";
             this.txtFullname.PlaceholderText = "fullname";
             this.txtFullname.Size = new System.Drawing.Size(269, 31);
@@ -137,7 +139,7 @@
             this.label5.BackColor = System.Drawing.Color.SteelBlue;
             this.label5.Font = new System.Drawing.Font("Britannic Bold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.Lavender;
-            this.label5.Location = new System.Drawing.Point(265, 277);
+            this.label5.Location = new System.Drawing.Point(326, 278);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(128, 31);
             this.label5.TabIndex = 15;
@@ -162,7 +164,7 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLogin.Font = new System.Drawing.Font("Britannic Bold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnLogin.Location = new System.Drawing.Point(422, 451);
+            this.btnLogin.Location = new System.Drawing.Point(483, 452);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(130, 34);
             this.btnLogin.TabIndex = 18;
@@ -192,6 +194,7 @@
             this.MaximumSize = new System.Drawing.Size(1024, 640);
             this.MinimumSize = new System.Drawing.Size(1024, 640);
             this.Name = "Signup";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Signup";
             this.Load += new System.EventHandler(this.Signup_Load);
             this.ResumeLayout(false);

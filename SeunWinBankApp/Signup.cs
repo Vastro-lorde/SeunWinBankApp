@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+using SeunWinBankAppCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +14,11 @@ namespace SeunWinBankApp
 {
     public partial class Signup : Form
     {
-        public Login login { get => new(); }
+        private static IValidation _validation;
+        public static IValidation Validation
+        {
+            get => _validation ??= new Validations();
+        }
         public Signup()
         {
             InitializeComponent();
@@ -25,12 +31,22 @@ namespace SeunWinBankApp
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
+           
             string fullname = txtFullname.Text;
             string email = txtEmail.Text;
             string password = txtPassword.Text;
             if (fullname == "" || email == "" || password == "")
             {
                 MessageBox.Show("Please fill all fields");
+            }
+            else if (!Validation.VerifyEmail(email))
+            {
+                MessageBox.Show("Incorrect format of Email inputed");
+            }
+            else if (!Validation.CheckPasswordInput(password))
+            {
+                MessageBox.Show("Password should contain an uppercase, lowercase, number and special character");
+
             }
         }
 
@@ -41,7 +57,7 @@ namespace SeunWinBankApp
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            login.Show();
+            Show();
             this.Hide();
         }
     }
