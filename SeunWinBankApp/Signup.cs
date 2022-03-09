@@ -12,6 +12,7 @@ namespace SeunWinBankApp
 {
     public partial class Signup : Form
     {
+        public Login login { get => new(); }
         public Signup()
         {
             InitializeComponent();
@@ -27,6 +28,21 @@ namespace SeunWinBankApp
             string fullname = txtFullname.Text;
             string email = txtEmail.Text;
             string password = txtPassword.Text;
+            if (fullname == "" || email == "" || password == "")
+            {
+                MessageBox.Show("Please fill all fields");
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            login.Show();
+            this.Hide();
         }
     }
 }

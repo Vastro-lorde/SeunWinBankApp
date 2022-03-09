@@ -13,6 +13,7 @@ namespace SeunWinBankApp
 {
     public partial class Login : Form
     {
+        public Signup signup = new(); 
         private static IValidation _validation;
         public static IValidation Validation
         {
@@ -42,11 +43,25 @@ namespace SeunWinBankApp
         {
             string email = txtEmail.Text;
             string password = txtPassword.Text;
+            if (email == "" || password == "")
+            {
+                MessageBox.Show("Please fill all fields");
+            }
+            else if (!Validation.VerifyEmail(email)) 
+            { 
+                MessageBox.Show("Incorrect format of Email inputed");
+            } 
+            else if (!Validation.CheckPasswordInput(password))
+            {
+                MessageBox.Show("Password should contain an uppercase, lowercase, number and special character");
+
+            }
+
+            
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            Signup signup = new Signup();
             signup.Show();
             this.Hide();
         }
@@ -54,6 +69,11 @@ namespace SeunWinBankApp
         private void txtEmail_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
