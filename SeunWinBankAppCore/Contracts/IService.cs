@@ -11,6 +11,7 @@ namespace SeunWinBankAppCore
         User CreateUser(string fullName, string password, string email);
         List<User> LoginUser(string email, string password);
         string CreateAccountNumber();
+        SAccount CreateAccount(string accountType);
         SAccount GetAccount(string accountNumber);
         bool NewTransaction(decimal amount, string description, SAccount account);
     }

@@ -46,6 +46,13 @@ namespace SeunWinBankAppCore
             return number.ToString();
         }
 
+        public SAccount CreateAccount(string accountType)
+        {
+            account.AccountNumber = CreateAccountNumber();
+            account.AccountType = accountType;  
+            return account;
+        }
+
         public SAccount GetAccount(string accountNumber)
         {
             SAccount result = null;   
