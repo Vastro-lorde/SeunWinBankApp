@@ -14,10 +14,17 @@ namespace SeunWinBankApp
 {
     public partial class Signup : Form
     {
+        public static Login login = new Login();
+        public Dashboard dashboard = new();
         private static IValidation _validation;
         public static IValidation Validation
         {
             get => _validation ??= new Validations();
+        }
+        private static IService _service;
+        public static IService Service
+        {
+            get => _service ??= new Service();
         }
         public Signup()
         {
@@ -38,16 +45,31 @@ namespace SeunWinBankApp
             if (fullname == "" || email == "" || password == "")
             {
                 MessageBox.Show("Please fill all fields");
+                return;
             }
             else if (!Validation.VerifyEmail(email))
             {
                 MessageBox.Show("Incorrect format of Email inputed");
+                return;
             }
             else if (!Validation.CheckPasswordInput(password))
             {
                 MessageBox.Show("Password should contain an uppercase, lowercase, number and special character");
-
+                return;
             }
+
+            if (DbConnect.WriteToDb(Service.CreateUser(fullname,password,email)))
+            {
+                 MessageBox.Show("Successfull");
+                 dashboard.Show();
+                 this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Failed");
+            }
+                
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -57,7 +79,7 @@ namespace SeunWinBankApp
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Show();
+            login.Show();
             this.Hide();
         }
     }

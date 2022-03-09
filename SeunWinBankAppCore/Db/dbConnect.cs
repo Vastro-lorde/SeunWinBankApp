@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 using System.IO;
 using Newtonsoft.Json;
 
-namespace SeunWinBankAppCore.Db
+namespace SeunWinBankAppCore
 {
-    public class dbConnect
+    public static class DbConnect
     {
-        string path = Path.Combine(Environment.CurrentDirectory, "Database.json");
-        public bool WriteToDb(User user)
+        public static string path = Path.Combine(Environment.CurrentDirectory,"Store.json");
+        public static bool WriteToDb(User user)
         {
             try
             {

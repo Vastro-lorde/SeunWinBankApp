@@ -14,15 +14,15 @@ namespace SeunWinBankAppCore
         }
 
         public static SAccount account;
-        public static User User;
         public static UserStore UserStore;
         public static STransaction transaction;
         public User CreateUser(string fullName, string password, string email )
         {
-            User.Fullname = fullName;
-            User.Password = password;
-            User.Email = email;
-            return User;
+            User user = new User();
+            user.Fullname = fullName;
+            user.Password = password;
+            user.Email = email;
+            return user;
         }
 
         public List<User> LoginUser(string email, string password)
@@ -53,7 +53,7 @@ namespace SeunWinBankAppCore
             return account;
         }
 
-        public SAccount GetAccount(string accountNumber)
+        /*public SAccount GetAccount(string accountNumber)
         {
             SAccount result = null;   
             User.ListOfBankAccounts.ForEach(account =>
@@ -64,7 +64,7 @@ namespace SeunWinBankAppCore
                 }
             });
             return result;
-        }
+        }*/
         public bool NewTransaction(decimal amount, string description, SAccount account)
         {
             if (account.AccountBalance <= 1000 && account.AccountType == "Saving" && amount < 0) return false;

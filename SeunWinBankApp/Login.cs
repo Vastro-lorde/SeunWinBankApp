@@ -15,7 +15,7 @@ namespace SeunWinBankApp
     {
         public Signup signup = new(); 
         public Dashboard dashboard = new();
-        private static IValidation _validation;
+        public static IValidation _validation;
         public static IValidation Validation
         {
             get => _validation ??= new Validations();
