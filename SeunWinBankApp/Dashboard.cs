@@ -13,9 +13,9 @@ namespace SeunWinBankApp
     
     public partial class Dashboard : Form
     {
-        public string Fullname = "";
-        public string AccountType = "";
-        public string AccountBalance = "";
+        
+        public string AccountType;
+        public string AccountBalance;
         public Dashboard()
         {
             InitializeComponent();
@@ -28,12 +28,22 @@ namespace SeunWinBankApp
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-
+            labName.Text = Signup.Fullname;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labName_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

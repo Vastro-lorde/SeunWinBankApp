@@ -38,8 +38,6 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.labName = new System.Windows.Forms.Label();
-            this.labAccountType = new System.Windows.Forms.Label();
-            this.labAccountBalance = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -69,17 +67,18 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(204, 338);
+            this.button1.Location = new System.Drawing.Point(204, 294);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(274, 34);
             this.button1.TabIndex = 10;
             this.button1.Text = "Create Account";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnAccountStatement
             // 
             this.btnAccountStatement.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnAccountStatement.Location = new System.Drawing.Point(513, 338);
+            this.btnAccountStatement.Location = new System.Drawing.Point(513, 294);
             this.btnAccountStatement.Name = "btnAccountStatement";
             this.btnAccountStatement.Size = new System.Drawing.Size(274, 34);
             this.btnAccountStatement.TabIndex = 11;
@@ -88,7 +87,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(204, 404);
+            this.button3.Location = new System.Drawing.Point(204, 360);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(274, 34);
             this.button3.TabIndex = 12;
@@ -97,7 +96,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(513, 404);
+            this.button4.Location = new System.Drawing.Point(513, 360);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(274, 34);
             this.button4.TabIndex = 13;
@@ -106,7 +105,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(204, 467);
+            this.button5.Location = new System.Drawing.Point(204, 423);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(274, 34);
             this.button5.TabIndex = 14;
@@ -115,7 +114,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(513, 467);
+            this.button6.Location = new System.Drawing.Point(513, 423);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(274, 34);
             this.button6.TabIndex = 15;
@@ -133,28 +132,6 @@
             this.labName.Size = new System.Drawing.Size(174, 48);
             this.labName.TabIndex = 16;
             this.labName.Text = "Fullname";
-            // 
-            // labAccountType
-            // 
-            this.labAccountType.AutoSize = true;
-            this.labAccountType.BackColor = System.Drawing.Color.Transparent;
-            this.labAccountType.ForeColor = System.Drawing.Color.Transparent;
-            this.labAccountType.Location = new System.Drawing.Point(204, 266);
-            this.labAccountType.Name = "labAccountType";
-            this.labAccountType.Size = new System.Drawing.Size(119, 25);
-            this.labAccountType.TabIndex = 17;
-            this.labAccountType.Text = "Account Type";
-            // 
-            // labAccountBalance
-            // 
-            this.labAccountBalance.AutoSize = true;
-            this.labAccountBalance.BackColor = System.Drawing.Color.Transparent;
-            this.labAccountBalance.ForeColor = System.Drawing.Color.Transparent;
-            this.labAccountBalance.Location = new System.Drawing.Point(204, 310);
-            this.labAccountBalance.Name = "labAccountBalance";
-            this.labAccountBalance.Size = new System.Drawing.Size(22, 25);
-            this.labAccountBalance.TabIndex = 18;
-            this.labAccountBalance.Text = "0";
             // 
             // btnExit
             // 
@@ -189,8 +166,6 @@
             this.ClientSize = new System.Drawing.Size(1024, 640);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.labAccountBalance);
-            this.Controls.Add(this.labAccountType);
             this.Controls.Add(this.labName);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
@@ -222,8 +197,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label labName;
-        private System.Windows.Forms.Label labAccountType;
-        private System.Windows.Forms.Label labAccountBalance;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button button2;
     }
